@@ -14,14 +14,10 @@ Route::get('/edit-data/{id}',[CrudController::class,'editData'])->name('edit-dat
 Route::post('/update-data/{id}',[CrudController::class,'updateData'])->name('update-data');
 Route::get('/delete-data/{id}',[CrudController::class,'deleteData'])->name('delete-data');
 
-Route::resource('photos', PhotoController::class);
 
-Route::get('/signup',[frontController::class,'signUp'])->name('signUp');
-Route::post('/signup',[frontController::class,'processSignup']);
 
 Route::get('/login',[AuthController::class,'showLoginForm'])->name('login');
 Route::post('/login',[AuthController::class,'processLoginForm'])->name('processlogin');
-
 Route::get('/register',[AuthController::class,'showRegisterForm'])->name('register');
 Route::post('/register',[AuthController::class,'processRegisterForm']);
 
